@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.waterlemons2k.com</id>
     <title>WaterLemons2k的博客</title>
-    <updated>2022-06-07T13:27:01.666Z</updated>
+    <updated>2022-06-07T14:04:55.877Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.waterlemons2k.com"/>
     <link rel="self" href="https://blog.waterlemons2k.com/atom.xml"/>
@@ -26,7 +26,8 @@
 <img src="https://user-images.githubusercontent.com/62788816/172388698-b64d9328-d92c-4267-a86c-33ebed35daa9.png" alt="Gridea" loading="lazy"></li>
 <li>点击同步后等几分钟，如果访问失败请回到存放Gridea的仓库，点Settings(设置)-Pages,将Source(来源)设置为main,点击Save(保存).保存后再次尝试同步。</li>
 <li><img src="https://user-images.githubusercontent.com/62788816/172390675-48204bdb-fb8e-4f89-8df8-32e928bc4fda.png" alt="Pages" loading="lazy"><br>
-完成!</li>
+完成!<br>
+相关博客:<a href="/gridea-gitalk">Gridea使用Gitalk评论系统</a></li>
 </ol>
 ]]></content>
     </entry>
@@ -180,7 +181,8 @@ start adbd
 <img src="https://user-images.githubusercontent.com/62788816/157839908-159433b1-ae91-4456-8558-ec537398af33.png" alt="bind" loading="lazy"><br>
 点击使用 GitHub 登录，然后点击Authorize来授权<br>
 <img src="https://user-images.githubusercontent.com/62788816/157840257-5513c72a-9e0b-4646-b162-632248da616e.png" alt="Authorize" loading="lazy"><br>
-完成!</p>
+完成!<br>
+相关博客:<a href="/Gridea-on-GitHub-Pages">使用Gridea在GitHub Pages上搭建博客</a></p>
 ]]></content>
     </entry>
     <entry>
