@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://waterlemons2k.github.io</id>
+    <id>https://blog.waterlemons2k.com</id>
     <title>WaterLemons2k的博客</title>
-    <updated>2022-06-07T12:16:09.520Z</updated>
+    <updated>2022-06-07T13:17:23.678Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://waterlemons2k.github.io"/>
-    <link rel="self" href="https://waterlemons2k.github.io/atom.xml"/>
-    <logo>https://waterlemons2k.github.io/images/avatar.png</logo>
-    <icon>https://waterlemons2k.github.io/favicon.ico</icon>
+    <link rel="alternate" href="https://blog.waterlemons2k.com"/>
+    <link rel="self" href="https://blog.waterlemons2k.com/atom.xml"/>
+    <logo>https://blog.waterlemons2k.com/images/avatar.png</logo>
+    <icon>https://blog.waterlemons2k.com/favicon.ico</icon>
     <rights>All rights reserved 2022, WaterLemons2k的博客</rights>
     <entry>
         <title type="html"><![CDATA[安卓使用终端启用adb]]></title>
-        <id>https://waterlemons2k.github.io/Android-Terminal-adb/</id>
-        <link href="https://waterlemons2k.github.io/Android-Terminal-adb/">
+        <id>https://blog.waterlemons2k.com/Android-Terminal-adb/</id>
+        <link href="https://blog.waterlemons2k.com/Android-Terminal-adb/">
         </link>
         <updated>2022-04-21T09:58:43.000Z</updated>
         <content type="html"><![CDATA[<p>一些安卓设备启用了终端却没有启用adb，使用以下命令开启:</p>
@@ -27,8 +27,8 @@ start adbd
     </entry>
     <entry>
         <title type="html"><![CDATA[你换的“德赛原装电池”是什么来头]]></title>
-        <id>https://waterlemons2k.github.io/Desay-Battery-source/</id>
-        <link href="https://waterlemons2k.github.io/Desay-Battery-source/">
+        <id>https://blog.waterlemons2k.com/Desay-Battery-source/</id>
+        <link href="https://blog.waterlemons2k.com/Desay-Battery-source/">
         </link>
         <updated>2022-04-16T08:40:51.000Z</updated>
         <content type="html"><![CDATA[<p>来源:http://www.360doc.com/content/19/1215/08/42718021_879822337.shtml</p>
@@ -45,8 +45,8 @@ start adbd
     </entry>
     <entry>
         <title type="html"><![CDATA[VS Code一键配置C/C++]]></title>
-        <id>https://waterlemons2k.github.io/VSCode-Configure-C/</id>
-        <link href="https://waterlemons2k.github.io/VSCode-Configure-C/">
+        <id>https://blog.waterlemons2k.com/VSCode-Configure-C/</id>
+        <link href="https://blog.waterlemons2k.com/VSCode-Configure-C/">
         </link>
         <updated>2022-04-06T09:33:22.000Z</updated>
         <content type="html"><![CDATA[<h2 id="autovscenv是一个在vs-code中一键配置cc的程序">AutoVsCEnv是一个在VS Code中一键配置C/C++的程序</h2>
@@ -62,8 +62,8 @@ start adbd
     </entry>
     <entry>
         <title type="html"><![CDATA[VS Code插件推荐]]></title>
-        <id>https://waterlemons2k.github.io/VS-Code-Extension/</id>
-        <link href="https://waterlemons2k.github.io/VS-Code-Extension/">
+        <id>https://blog.waterlemons2k.com/VS-Code-Extension/</id>
+        <link href="https://blog.waterlemons2k.com/VS-Code-Extension/">
         </link>
         <updated>2022-04-06T08:12:43.000Z</updated>
         <content type="html"><![CDATA[<p>这里有一些推荐的VS Code插件</p>
@@ -80,8 +80,8 @@ start adbd
     </entry>
     <entry>
         <title type="html"><![CDATA[Git删除Commit]]></title>
-        <id>https://waterlemons2k.github.io/Git-Delete-Commit/</id>
-        <link href="https://waterlemons2k.github.io/Git-Delete-Commit/">
+        <id>https://blog.waterlemons2k.com/Git-Delete-Commit/</id>
+        <link href="https://blog.waterlemons2k.com/Git-Delete-Commit/">
         </link>
         <updated>2022-03-22T07:28:58.000Z</updated>
         <content type="html"><![CDATA[<ol>
@@ -112,8 +112,8 @@ start adbd
     </entry>
     <entry>
         <title type="html"><![CDATA[ESXi使用RDM直通]]></title>
-        <id>https://waterlemons2k.github.io/ESXi-RDM/</id>
-        <link href="https://waterlemons2k.github.io/ESXi-RDM/">
+        <id>https://blog.waterlemons2k.com/ESXi-RDM/</id>
+        <link href="https://blog.waterlemons2k.com/ESXi-RDM/">
         </link>
         <updated>2022-03-13T08:50:31.000Z</updated>
         <content type="html"><![CDATA[<p>引用:https://www.77bx.com/60.html<br>
@@ -139,8 +139,8 @@ start adbd
     </entry>
     <entry>
         <title type="html"><![CDATA[Gridea使用Gitalk评论系统]]></title>
-        <id>https://waterlemons2k.github.io/gridea-gitalk/</id>
-        <link href="https://waterlemons2k.github.io/gridea-gitalk/">
+        <id>https://blog.waterlemons2k.com/gridea-gitalk/</id>
+        <link href="https://blog.waterlemons2k.com/gridea-gitalk/">
         </link>
         <updated>2022-03-11T09:10:15.000Z</updated>
         <content type="html"><![CDATA[<p>引用:https://xgmm.me/post/gridea-pei-zhi-gitalk-ping-lun-xi-tong/<br>
@@ -164,8 +164,8 @@ start adbd
     </entry>
     <entry>
         <title type="html"><![CDATA[VMware使用USB输入设备]]></title>
-        <id>https://waterlemons2k.github.io/VMware-HID/</id>
-        <link href="https://waterlemons2k.github.io/VMware-HID/">
+        <id>https://blog.waterlemons2k.com/VMware-HID/</id>
+        <link href="https://blog.waterlemons2k.com/VMware-HID/">
         </link>
         <updated>2022-03-06T02:57:23.000Z</updated>
         <content type="html"><![CDATA[<p>将USB输入设备(如USB键盘)连接到VMware Workstation时，会出现<br>
@@ -178,8 +178,8 @@ start adbd
     </entry>
     <entry>
         <title type="html"><![CDATA[将Dell Perc H310阵列卡刷为LSI-9211-8i阵列卡]]></title>
-        <id>https://waterlemons2k.github.io/H310-to-LSi/</id>
-        <link href="https://waterlemons2k.github.io/H310-to-LSi/">
+        <id>https://blog.waterlemons2k.com/H310-to-LSi/</id>
+        <link href="https://blog.waterlemons2k.com/H310-to-LSi/">
         </link>
         <updated>2022-03-06T02:54:44.000Z</updated>
         <content type="html"><![CDATA[<p>来自:https://techmattr.wordpress.com/2016/04/11/updated-sas-hba-crossflashing-or-flashing-to-it-mode-dell-perc-h200-and-h310</p>
@@ -218,8 +218,8 @@ s2fp19.exe -o -sasadd 500
     </entry>
     <entry>
         <title type="html"><![CDATA[Dolphin模拟器使用教程]]></title>
-        <id>https://waterlemons2k.github.io/Dolphin-emu/</id>
-        <link href="https://waterlemons2k.github.io/Dolphin-emu/">
+        <id>https://blog.waterlemons2k.com/Dolphin-emu/</id>
+        <link href="https://blog.waterlemons2k.com/Dolphin-emu/">
         </link>
         <updated>2022-03-06T02:33:14.000Z</updated>
         <content type="html"><![CDATA[<p>首先请<a href="https://cn.dolphin-emu.org/">下载</a>Dolphin模拟器，<a href="https://file.waterlemons2k.com/Dolphin/">备用下载</a><br>
