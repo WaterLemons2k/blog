@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>Gridea使用Gitalk评论系统 | WaterLemons2k的博客</title>
+<meta name="description" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://waterlemons2k.github.io/favicon.ico?v=1654603406286">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://waterlemons2k.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://waterlemons2k.github.io">
+        <img class="avatar" src="https://waterlemons2k.github.io/images/avatar.png?v=1654603406286" alt=""
+          width="32px" height="32px">
+      </a>
+      <a href="https://waterlemons2k.github.io">
+        <h1 class="site-title">
+          WaterLemons2k的博客
+        </h1>
+      </a>
+    </div>
+    <div class="right">
+      <div class="gridea-search-div" v-if="headSearchShow">
+        <form id="gridea-search-form" action="https://waterlemons2k.github.io/search/">
+          <input class="gridea-search-input" autocomplete="off" spellcheck="false" name="q" />
+        </form>
+      </div>
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }"
+          @click="menuClick()"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      <div class="gridea-search-div" v-if="menuSearchShow">
+        <form id="gridea-search-form" action="https://waterlemons2k.github.io/search/">
+          <input class="gridea-search-input" autocomplete="off" spellcheck="false" name="q" />
+        </form>
+      </div>
+      
+        
+            <a href="/" class="menu purple-link">
+              首页
+            </a>
+            
+              
+    </div>
+  </div>
+</transition>
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">Gridea使用Gitalk评论系统</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-03-11</span>
+            
+          </div>
+          <div class="post-content">
+            <p>引用:https://xgmm.me/post/gridea-pei-zhi-gitalk-ping-lun-xi-tong/<br>
+这是一个如何在Gridea里使用Gitalk的教程<br>
+<a href="https://gridea.dev/gridea-start/">Gridea配置教程</a></p>
+<h2 id="配置oauth">配置OAuth</h2>
+<p>首先，在<a href="https://github.com/settings/applications/new">这里</a>配置OAuth application<br>
+<img src="https://user-images.githubusercontent.com/62788816/157833249-1764aa74-853d-4be6-b093-a88fe80ba7ab.png" alt="OAuth" loading="lazy"><br>
+点击Register application.记下Client ID，然后点击Generate a new client secret<br>
+<img src="https://user-images.githubusercontent.com/62788816/157833764-3a527a08-f75b-4277-b6a6-63aa77904404.png" alt="Generate" loading="lazy"><br>
+记下Cleient secrets</p>
+<h1 id="配置gridea">配置Gridea</h1>
+<p>打开Gridea,点击远程-评论配置，配置如图<br>
+<img src="https://user-images.githubusercontent.com/62788816/157835842-ef661e53-99af-4991-a335-a3a894496562.png" alt="Gridea" loading="lazy"><br>
+配置完成后点击同步，然后使用Homepage URL里的地址访问。随便打开一篇文章滑到最底部，你会看到:<br>
+<img src="https://user-images.githubusercontent.com/62788816/157839908-159433b1-ae91-4456-8558-ec537398af33.png" alt="bind" loading="lazy"><br>
+点击使用 GitHub 登录，然后点击Authorize来授权<br>
+<img src="https://user-images.githubusercontent.com/62788816/157840257-5513c72a-9e0b-4646-b162-632248da616e.png" alt="Authorize" loading="lazy"><br>
+完成!</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://waterlemons2k.github.io/VMware-HID/">
+              <h3 class="post-title">
+                下一篇：VMware使用USB输入设备
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+Theme by <a href="https://github.com/kytrun/gridea-theme-fly">Fly-Search</a> | <a class="rss" href="https://waterlemons2k.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script src="https://waterlemons2k.github.io/media/scripts/index.js"></script>
+
+
+
+
+  </body>
+</html>

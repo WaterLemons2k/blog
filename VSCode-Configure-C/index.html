@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>VS Code一键配置C/C++ | WaterLemons2k的博客</title>
+<meta name="description" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://waterlemons2k.github.io/favicon.ico?v=1654603406286">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://waterlemons2k.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://waterlemons2k.github.io">
+        <img class="avatar" src="https://waterlemons2k.github.io/images/avatar.png?v=1654603406286" alt=""
+          width="32px" height="32px">
+      </a>
+      <a href="https://waterlemons2k.github.io">
+        <h1 class="site-title">
+          WaterLemons2k的博客
+        </h1>
+      </a>
+    </div>
+    <div class="right">
+      <div class="gridea-search-div" v-if="headSearchShow">
+        <form id="gridea-search-form" action="https://waterlemons2k.github.io/search/">
+          <input class="gridea-search-input" autocomplete="off" spellcheck="false" name="q" />
+        </form>
+      </div>
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }"
+          @click="menuClick()"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      <div class="gridea-search-div" v-if="menuSearchShow">
+        <form id="gridea-search-form" action="https://waterlemons2k.github.io/search/">
+          <input class="gridea-search-input" autocomplete="off" spellcheck="false" name="q" />
+        </form>
+      </div>
+      
+        
+            <a href="/" class="menu purple-link">
+              首页
+            </a>
+            
+              
+    </div>
+  </div>
+</transition>
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">VS Code一键配置C/C++</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-04-06</span>
+            
+          </div>
+          <div class="post-content">
+            <h2 id="autovscenv是一个在vs-code中一键配置cc的程序">AutoVsCEnv是一个在VS Code中一键配置C/C++的程序</h2>
+<p><strong><a href="https://github.com/SDchao/AutoVsCEnv_WPF">下载地址1</a> <a href="https://sdchao.lanzoum.com/iB7dE01231be">下载地址2</a> <a href="https://file.waterlemons2k.com/AutoVsCEnv_WPF.V1.994.zip">下载地址3</a></strong><br>
+解压后首先运行<strong>AutoVsCEnv_WPF.exe</strong>,点开始<br>
+<img src="https://user-images.githubusercontent.com/62788816/161931638-a7d659cc-4479-4c95-ab14-b275cc6311c6.png" alt="First" loading="lazy"><br>
+选择MinGW安装位置，点下一步<br>
+<img src="https://user-images.githubusercontent.com/62788816/161932099-3a5e290f-d1d9-43c7-b389-50c22b03c7fe.png" alt="MiniGW" loading="lazy"><br>
+选择存放C/C++源代码的文件夹，点下一步<br>
+<img src="https://user-images.githubusercontent.com/62788816/161932688-1d96d3c8-223e-4e56-9f13-cce22ebbc095.png" alt="Source" loading="lazy"><br>
+安装完成后<strong>重启电脑</strong>，开始用VS Code写代码吧!</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://waterlemons2k.github.io/VS-Code-Extension/">
+              <h3 class="post-title">
+                下一篇：VS Code插件推荐
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+Theme by <a href="https://github.com/kytrun/gridea-theme-fly">Fly-Search</a> | <a class="rss" href="https://waterlemons2k.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script src="https://waterlemons2k.github.io/media/scripts/index.js"></script>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>ESXi使用RDM直通 | WaterLemons2k的博客</title>
+<meta name="description" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://waterlemons2k.github.io/favicon.ico?v=1654603406286">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://waterlemons2k.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://waterlemons2k.github.io">
+        <img class="avatar" src="https://waterlemons2k.github.io/images/avatar.png?v=1654603406286" alt=""
+          width="32px" height="32px">
+      </a>
+      <a href="https://waterlemons2k.github.io">
+        <h1 class="site-title">
+          WaterLemons2k的博客
+        </h1>
+      </a>
+    </div>
+    <div class="right">
+      <div class="gridea-search-div" v-if="headSearchShow">
+        <form id="gridea-search-form" action="https://waterlemons2k.github.io/search/">
+          <input class="gridea-search-input" autocomplete="off" spellcheck="false" name="q" />
+        </form>
+      </div>
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }"
+          @click="menuClick()"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      <div class="gridea-search-div" v-if="menuSearchShow">
+        <form id="gridea-search-form" action="https://waterlemons2k.github.io/search/">
+          <input class="gridea-search-input" autocomplete="off" spellcheck="false" name="q" />
+        </form>
+      </div>
+      
+        
+            <a href="/" class="menu purple-link">
+              首页
+            </a>
+            
+              
+    </div>
+  </div>
+</transition>
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">ESXi使用RDM直通</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-03-13</span>
+            
+          </div>
+          <div class="post-content">
+            <p>引用:https://www.77bx.com/60.html<br>
+这是一个ESXi使用裸设备映射(RDM)的教程</p>
+<h2 id="启用ssh">启用SSH</h2>
+<p>登陆ESXi，然后点击操作-服务-启用安全 Shell (SSH)<br>
+<img src="https://user-images.githubusercontent.com/62788816/158052558-98a73ca5-fef2-41d7-a9fa-e0c5bb23401f.png" alt="EnableSSH" loading="lazy"></p>
+<h2 id="查询硬盘">查询硬盘</h2>
+<ol>
+<li>点击存储-设备，找到想要直通的硬盘，记住括号里的内容，这是后文所指的硬盘路径<br>
+<img src="https://user-images.githubusercontent.com/62788816/158052758-91810eee-013c-405d-9b64-c6eaf51db572.png" alt="disk" loading="lazy"></li>
+<li>点击存储-数据存储-datastore1(或其它)，记住位置:里的内容，这是后文所指的数据存储路径<br>
+<img src="https://user-images.githubusercontent.com/62788816/158052937-695a855b-f423-45ef-9f3f-5d948361e9d2.png" alt="volume" loading="lazy"></li>
+</ol>
+<h2 id="开始直通">开始直通</h2>
+<p>使用ssh root@ESXi ip地址或其它软件来连接到SSH，然后执行<br>
+<code>vmkfstools -r /vmfs/devices/disks/硬盘路径 数据存储路径/名称.vmdk</code><br>
+<img src="https://user-images.githubusercontent.com/62788816/158053354-978820de-4917-40f0-9472-84e636a6f6b1.png" alt="ssh" loading="lazy"></p>
+<p>回到数据存储里检查一下<br>
+<img src="https://user-images.githubusercontent.com/62788816/158053412-149f14db-c2ab-4858-8f7b-46aec502a716.png" alt="file" loading="lazy"><br>
+完成!</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://waterlemons2k.github.io/gridea-gitalk/">
+              <h3 class="post-title">
+                下一篇：Gridea使用Gitalk评论系统
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+Theme by <a href="https://github.com/kytrun/gridea-theme-fly">Fly-Search</a> | <a class="rss" href="https://waterlemons2k.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script src="https://waterlemons2k.github.io/media/scripts/index.js"></script>
+
+
+
+
+  </body>
+</html>

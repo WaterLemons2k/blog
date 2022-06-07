@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://waterlemons2k.github.io</id>
+    <title>WaterLemons2k的博客</title>
+    <updated>2022-06-07T12:03:31.772Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://waterlemons2k.github.io"/>
+    <link rel="self" href="https://waterlemons2k.github.io/atom.xml"/>
+    <logo>https://waterlemons2k.github.io/images/avatar.png</logo>
+    <icon>https://waterlemons2k.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, WaterLemons2k的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[安卓使用终端启用adb]]></title>
+        <id>https://waterlemons2k.github.io/Android-Terminal-adb/</id>
+        <link href="https://waterlemons2k.github.io/Android-Terminal-adb/">
+        </link>
+        <updated>2022-04-21T09:58:43.000Z</updated>
+        <content type="html"><![CDATA[<p>一些安卓设备启用了终端却没有启用adb，使用以下命令开启:</p>
+<pre><code>su
+setprop service.adb.tcp.port 5555
+stop adbd
+start adbd
+</code></pre>
+<p>现在可以尝试使用<code>adb connect ip</code>来连接设备!<br>
+来源:https://blog.csdn.net/casual_clover/article/details/121992404</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[你换的“德赛原装电池”是什么来头]]></title>
+        <id>https://waterlemons2k.github.io/Desay-Battery-source/</id>
+        <link href="https://waterlemons2k.github.io/Desay-Battery-source/">
+        </link>
+        <updated>2022-04-16T08:40:51.000Z</updated>
+        <content type="html"><![CDATA[<p>来源:http://www.360doc.com/content/19/1215/08/42718021_879822337.shtml</p>
+<p>今天我们来说说今年市场上出货量最大的原装电池。说这种电池前先必须来谈谈比较主流的电芯厂家。<br>
+苹果官方售后用的：ATL新能源、LG乐金化学（这两家电芯因为和苹果有协议，避免误会根本不会在国内公开销售电芯）<br>
+市场上全新全原的电池就是用以上主流或杂牌电芯，配上国产保护板排线或者原拆排线或者原拆板后接排焊接而成。之后再经过电芯前后丝印字体印刷，品牌电池或者会在电芯外面包裹一层自己品牌信息贴纸，最后经过写序列号、电池容量、循环次数等就得到一块全新电池。<br>
+花上五六毛钱封上包装贴上序列号等信息贴纸，一块德赛原厂原装电池就等着出现在各大手机维修店内。<br>
+如果用盒子包装，成本会贵几毛。<br>
+一般商家都会告诉你，都是德赛代工厂(注意德赛真的是代工厂，苹果原装电池的电芯与保护板都是有其他供应商生产，德赛只是相当于一个包装厂)拿出来的货，你就当听个笑话好了。各厂家用不同电芯与保护板以及生产工艺不同，并不好直接评定电池的好坏。<br>
+目前4.7寸电池代工厂有德赛和新浦(华普后被收购改名)，5.5寸电池代工厂有欣旺达和德赛。电池序列号前三位是代工厂代号，德赛F5D、新浦FG9、欣旺达F8Y。第四位是生产年份，第五六位是生产周份。<br>
+因为今年的“原装”电池泛滥，有些品牌厂家和销售商也坐不住了纷纷出辨别教程以及鼓励向有关部门举报造假售假行为。<br>
+之前炒的是原装数据线、原装充电器、原装耳机等，近两年开始炒原装电池。电池也是刚需，手机用两年电池寿命到了必须要换。炒电池比炒耳机充电器来钱更容易吧，而且换电池需要手工，同样的带动了维修店一起赚取丰厚的利润。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VS Code一键配置C/C++]]></title>
+        <id>https://waterlemons2k.github.io/VSCode-Configure-C/</id>
+        <link href="https://waterlemons2k.github.io/VSCode-Configure-C/">
+        </link>
+        <updated>2022-04-06T09:33:22.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="autovscenv是一个在vs-code中一键配置cc的程序">AutoVsCEnv是一个在VS Code中一键配置C/C++的程序</h2>
+<p><strong><a href="https://github.com/SDchao/AutoVsCEnv_WPF">下载地址1</a> <a href="https://sdchao.lanzoum.com/iB7dE01231be">下载地址2</a> <a href="https://file.waterlemons2k.com/AutoVsCEnv_WPF.V1.994.zip">下载地址3</a></strong><br>
+解压后首先运行<strong>AutoVsCEnv_WPF.exe</strong>,点开始<br>
+<img src="https://user-images.githubusercontent.com/62788816/161931638-a7d659cc-4479-4c95-ab14-b275cc6311c6.png" alt="First" loading="lazy"><br>
+选择MinGW安装位置，点下一步<br>
+<img src="https://user-images.githubusercontent.com/62788816/161932099-3a5e290f-d1d9-43c7-b389-50c22b03c7fe.png" alt="MiniGW" loading="lazy"><br>
+选择存放C/C++源代码的文件夹，点下一步<br>
+<img src="https://user-images.githubusercontent.com/62788816/161932688-1d96d3c8-223e-4e56-9f13-cce22ebbc095.png" alt="Source" loading="lazy"><br>
+安装完成后<strong>重启电脑</strong>，开始用VS Code写代码吧!</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VS Code插件推荐]]></title>
+        <id>https://waterlemons2k.github.io/VS-Code-Extension/</id>
+        <link href="https://waterlemons2k.github.io/VS-Code-Extension/">
+        </link>
+        <updated>2022-04-06T08:12:43.000Z</updated>
+        <content type="html"><![CDATA[<p>这里有一些推荐的VS Code插件</p>
+<h2 id="1-chinese-simplified-简体中文">1. <a href="vscode:extension/MS-CEINTL.vscode-language-pack-zh-hans">Chinese (Simplified) (简体中文)</a></h2>
+<p>适用于 VS Code 的中文（简体）语言包<br>
+<img src="https://user-images.githubusercontent.com/62788816/158343536-fd52e5c2-0550-4f97-82b0-3a97f484ce09.png" alt="Chinese" loading="lazy"></p>
+<h2 id="2code-runner">2.<a href="vscode:extension/formulahendry.code-runner">Code Runner</a></h2>
+<p>运行多种语言的代码<br>
+<img src="https://user-images.githubusercontent.com/62788816/161923587-4a9f4a5f-52bd-4f66-b35d-63098052534d.gif" alt="Code" loading="lazy"></p>
+<h2 id="3live-server">3.<a href="vscode:extension/ritwickdey.LiveServer">Live Server</a></h2>
+<p>运行HTTP服务器<br>
+<img src="https://user-images.githubusercontent.com/62788816/161927489-0deb32f3-01ab-4b5c-b892-0c7e7f3e50c1.gif" alt="HTML" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Git删除Commit]]></title>
+        <id>https://waterlemons2k.github.io/Git-Delete-Commit/</id>
+        <link href="https://waterlemons2k.github.io/Git-Delete-Commit/">
+        </link>
+        <updated>2022-03-22T07:28:58.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>输入以下命令来查看历史提交的commit</li>
+</ol>
+<pre><code>git log
+</code></pre>
+<ol start="2">
+<li>找到要删除的commit的注释，记住下一行的commit号(如图中红框)<br>
+<img src="https://user-images.githubusercontent.com/62788816/159430557-43cb4abd-32a7-49b2-ae04-c0cf9dab02e7.png" alt="log" loading="lazy"></li>
+<li>然后执行</li>
+</ol>
+<pre><code>git rebase -i commit号 
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/62788816/159431698-6fc4d4a9-6b67-4101-930c-402fd9afb342.png" alt="pick" loading="lazy"><br>
+4. 将要删除的commit号前面的<code>pick</code>替换为<code>drop</code><br>
+5. 输入以下命令检查是否删除</p>
+<pre><code>git log 
+</code></pre>
+<ol start="6">
+<li>最后输入以下命令推送至仓库即可</li>
+</ol>
+<pre><code>git push origin HEAD --force
+</code></pre>
+<p>完成!<br>
+引用:https://cloud.tencent.com/developer/article/1511875</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ESXi使用RDM直通]]></title>
+        <id>https://waterlemons2k.github.io/ESXi-RDM/</id>
+        <link href="https://waterlemons2k.github.io/ESXi-RDM/">
+        </link>
+        <updated>2022-03-13T08:50:31.000Z</updated>
+        <content type="html"><![CDATA[<p>引用:https://www.77bx.com/60.html<br>
+这是一个ESXi使用裸设备映射(RDM)的教程</p>
+<h2 id="启用ssh">启用SSH</h2>
+<p>登陆ESXi，然后点击操作-服务-启用安全 Shell (SSH)<br>
+<img src="https://user-images.githubusercontent.com/62788816/158052558-98a73ca5-fef2-41d7-a9fa-e0c5bb23401f.png" alt="EnableSSH" loading="lazy"></p>
+<h2 id="查询硬盘">查询硬盘</h2>
+<ol>
+<li>点击存储-设备，找到想要直通的硬盘，记住括号里的内容，这是后文所指的硬盘路径<br>
+<img src="https://user-images.githubusercontent.com/62788816/158052758-91810eee-013c-405d-9b64-c6eaf51db572.png" alt="disk" loading="lazy"></li>
+<li>点击存储-数据存储-datastore1(或其它)，记住位置:里的内容，这是后文所指的数据存储路径<br>
+<img src="https://user-images.githubusercontent.com/62788816/158052937-695a855b-f423-45ef-9f3f-5d948361e9d2.png" alt="volume" loading="lazy"></li>
+</ol>
+<h2 id="开始直通">开始直通</h2>
+<p>使用ssh root@ESXi ip地址或其它软件来连接到SSH，然后执行<br>
+<code>vmkfstools -r /vmfs/devices/disks/硬盘路径 数据存储路径/名称.vmdk</code><br>
+<img src="https://user-images.githubusercontent.com/62788816/158053354-978820de-4917-40f0-9472-84e636a6f6b1.png" alt="ssh" loading="lazy"></p>
+<p>回到数据存储里检查一下<br>
+<img src="https://user-images.githubusercontent.com/62788816/158053412-149f14db-c2ab-4858-8f7b-46aec502a716.png" alt="file" loading="lazy"><br>
+完成!</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gridea使用Gitalk评论系统]]></title>
+        <id>https://waterlemons2k.github.io/gridea-gitalk/</id>
+        <link href="https://waterlemons2k.github.io/gridea-gitalk/">
+        </link>
+        <updated>2022-03-11T09:10:15.000Z</updated>
+        <content type="html"><![CDATA[<p>引用:https://xgmm.me/post/gridea-pei-zhi-gitalk-ping-lun-xi-tong/<br>
+这是一个如何在Gridea里使用Gitalk的教程<br>
+<a href="https://gridea.dev/gridea-start/">Gridea配置教程</a></p>
+<h2 id="配置oauth">配置OAuth</h2>
+<p>首先，在<a href="https://github.com/settings/applications/new">这里</a>配置OAuth application<br>
+<img src="https://user-images.githubusercontent.com/62788816/157833249-1764aa74-853d-4be6-b093-a88fe80ba7ab.png" alt="OAuth" loading="lazy"><br>
+点击Register application.记下Client ID，然后点击Generate a new client secret<br>
+<img src="https://user-images.githubusercontent.com/62788816/157833764-3a527a08-f75b-4277-b6a6-63aa77904404.png" alt="Generate" loading="lazy"><br>
+记下Cleient secrets</p>
+<h1 id="配置gridea">配置Gridea</h1>
+<p>打开Gridea,点击远程-评论配置，配置如图<br>
+<img src="https://user-images.githubusercontent.com/62788816/157835842-ef661e53-99af-4991-a335-a3a894496562.png" alt="Gridea" loading="lazy"><br>
+配置完成后点击同步，然后使用Homepage URL里的地址访问。随便打开一篇文章滑到最底部，你会看到:<br>
+<img src="https://user-images.githubusercontent.com/62788816/157839908-159433b1-ae91-4456-8558-ec537398af33.png" alt="bind" loading="lazy"><br>
+点击使用 GitHub 登录，然后点击Authorize来授权<br>
+<img src="https://user-images.githubusercontent.com/62788816/157840257-5513c72a-9e0b-4646-b162-632248da616e.png" alt="Authorize" loading="lazy"><br>
+完成!</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VMware使用USB输入设备]]></title>
+        <id>https://waterlemons2k.github.io/VMware-HID/</id>
+        <link href="https://waterlemons2k.github.io/VMware-HID/">
+        </link>
+        <updated>2022-03-06T02:57:23.000Z</updated>
+        <content type="html"><![CDATA[<p>将USB输入设备(如USB键盘)连接到VMware Workstation时，会出现<br>
+<img src="https://user-images.githubusercontent.com/62788816/156562168-9361790d-7b71-46cb-bd35-16476114c897.png" alt="error" loading="lazy"><br>
+这时，在虚拟机的.vmx配置文件里添加一行即可解决</p>
+<pre><code>usb.generic.allowLastHID = &quot;TRUE&quot;
+</code></pre>
+<p>引用:https://blog.csdn.net/future_ai/article/details/80603724</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[将Dell Perc H310阵列卡刷为LSI-9211-8i阵列卡]]></title>
+        <id>https://waterlemons2k.github.io/H310-to-LSi/</id>
+        <link href="https://waterlemons2k.github.io/H310-to-LSi/">
+        </link>
+        <updated>2022-03-06T02:54:44.000Z</updated>
+        <content type="html"><![CDATA[<p>来自:https://techmattr.wordpress.com/2016/04/11/updated-sas-hba-crossflashing-or-flashing-to-it-mode-dell-perc-h200-and-h310</p>
+<p>您需要:</p>
+<ol>
+<li>一个FreeDOS可启动U盘，您可以使用<a href="http://rufus.ie/">Rufus</a>创建</li>
+<li><a href="https://www.mediafire.com/download/6mtie10d9ud6675/LSI-9211-8i.zip">LSI-9211-8i.zip</a> 此 ZIP 中的主固件文件是 P20。已经支持最新版本的FreeNAS。ZIP还包含工具，这些工具将使此过程变得更加简单。默认的 sas2flash 工具是 P05，在许多情况下允许降级和刷新不兼容的固件。</li>
+<li>一张Dell Perc H310阵列卡</li>
+</ol>
+<h2 id="开始">开始</h2>
+<ol>
+<li>使用Rufus创建好FreDOS可启动U盘后，将LSI-9211-8i.zip里的内容复制到根目录，看起来像是这样:<br>
+<img src="https://user-images.githubusercontent.com/62788816/156358179-0cddb7ce-16b6-46aa-95e5-84e10891c050.png" alt="folder" loading="lazy"></li>
+<li>重启后引导到FreeDOS可启动U盘</li>
+<li>接下来，我们开始准备刷卡<br>
+<code>megacli.exe -AdpAllInfo -aAll -page 20</code><br>
+按一次或两次回车键，您应该会看到一行以SAS Address开头的序列号:<br>
+<img src="https://user-images.githubusercontent.com/62788816/156358349-17363bd3-2aec-4bdd-9b6e-06526292bdec.jpg" alt="SAS" loading="lazy"><br>
+记下SAS地址<br>
+这是刷写Dell Perc H310的命令<br>
+<code>megarec.exe -writesbr 0 sbrempty.bin</code><br>
+即使失败也继续执行<br>
+<code>megarec.exe -cleanflash 0</code><br>
+重启计算机并重启至U盘</li>
+</ol>
+<pre><code>sas2flsh.exe -o -f 6GBPSAS.fw`  
+s2fp19.exe -o -sasadd 500
+</code></pre>
+<p>将500替换为SAS Address序列号<br>
+再次重启计算机并重启至U盘</p>
+<p>将Dell Perc H310刷写为LSI-9211-8i<br>
+<code>sas2flsh.exe -o -f 2118it.bin</code></p>
+<p>它会询问是否要继续，输入y继续<br>
+完成!</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dolphin模拟器使用教程]]></title>
+        <id>https://waterlemons2k.github.io/Dolphin-emu/</id>
+        <link href="https://waterlemons2k.github.io/Dolphin-emu/">
+        </link>
+        <updated>2022-03-06T02:33:14.000Z</updated>
+        <content type="html"><![CDATA[<p>首先请<a href="https://cn.dolphin-emu.org/">下载</a>Dolphin模拟器，<a href="https://file.waterlemons2k.com/Dolphin/">备用下载</a><br>
+如果报错请下载<a href="https://file.waterlemons2k.com/vc2015-2019.x64.exe">VC2015-2019 x64</a><br>
+解压后打开Dolphin.exe,第一次打开会弹出一个窗口，点否<br>
+<img src="https://user-images.githubusercontent.com/62788816/156364727-040ec7fb-f55c-48f1-88ad-5048e8bbc5f7.png" alt="first" loading="lazy"><br>
+接下来会弹出更新可用窗口，这里选择不要自动更新<br>
+<img src="https://user-images.githubusercontent.com/62788816/156364733-909a6413-8319-48f0-918f-5ce4924ce309.png" alt="update" loading="lazy"><br>
+点击视图-表单列以自定义每列显示的内容<br>
+<img src="https://user-images.githubusercontent.com/62788816/159620091-2872fb29-777d-4e03-98a1-da65868ae09a.png" alt="custom" loading="lazy"></p>
+<h2 id="设置">设置</h2>
+<p>在设置-Wii可以更改感应条位置、红外灵敏度、扬声器音量<br>
+<img src="https://user-images.githubusercontent.com/62788816/156364744-7745dfc9-72ef-4136-a802-7abe00f2ce90.png" alt="wiiset" loading="lazy"><br>
+然后点击路径-添加 将存放有Wii游戏的目录添加进去<br>
+<img src="https://user-images.githubusercontent.com/62788816/159217601-bd40b858-9561-4143-b218-c7da0324423b.png" alt="Add" loading="lazy"></p>
+<h2 id="图形">图形</h2>
+<p>点图形-常规<br>
+<img src="https://user-images.githubusercontent.com/62788816/156364749-bc516174-f7e5-4ac1-a0d3-1238d40948a9.png" alt="graphics" loading="lazy"><br>
+后端:Direct3D 12、Direct3D 11、Vulkan、OpenGL 逐个测试后选择最好的<br>
+长宽比:拉伸到窗口大小 将图像拉伸至窗口大小</p>
+<h3 id="下载mii"><a href="https://file.waterlemons2k.com/Mii.wad">下载Mii</a></h3>
+<h2 id="直通">直通</h2>
+<p>直通推荐使用BCM2045A或CSR8510芯片的蓝牙适配器<a href="https://file.waterlemons2k.com/zadig-2.4.exe">下载Zadig</a><br>
+以管理员身份运行，点Options-List All Devices<br>
+<img src="https://user-images.githubusercontent.com/62788816/158530436-3d18c3d5-30eb-48c1-b8ce-3b9bf53d5dc2.png" alt="Zadig1" loading="lazy"><br>
+选择<strong>libusbK</strong>或<strong>WinUSB</strong>,点Replace Driver<br>
+<img src="https://user-images.githubusercontent.com/62788816/158530442-6d64dcb5-bf13-457a-afd3-821036980251.png" alt="Zadig2" loading="lazy"><br>
+安装完成!<br>
+<img src="https://user-images.githubusercontent.com/62788816/158530443-c24a9f6d-6e5c-4778-8b19-a4f12e2a269b.png" alt="Zadig3" loading="lazy"><br>
+今后如果出现无法配对的情况时，请尝试Reinstall Driver做最后的努力<br>
+<img src="https://user-images.githubusercontent.com/62788816/159691867-f55dec04-98f9-4c36-8464-82b149979b4c.png" alt="Zadig4" loading="lazy"><br>
+如果提示安装失败，到设备管理器查看是否有驱动，有可以继续，没有请重试<br>
+<img src="https://user-images.githubusercontent.com/62788816/158530446-4cdc5783-8ed3-4538-ad10-1446ab4e3714.png" alt="devmgmt" loading="lazy"><br>
+回到Dolphin,点控制器，选直通蓝牙适配器<br>
+<img src="https://user-images.githubusercontent.com/62788816/156364858-d1075866-76e6-468a-975c-a568965dd75c.png" alt="passthrough" loading="lazy"><br>
+打开游戏点控制器-同步，屏幕会出现黄字<br>
+<img src="https://user-images.githubusercontent.com/62788816/158531614-197191d1-0168-4b52-992e-bb14f3cc79e6.png" alt="dolphinsync" loading="lazy"><br>
+在出现黄字的同时，打开手柄电池盖，按sync红色按钮 <a href="https://www.businessinsider.com/how-to-sync-wii-remote">图片来源</a><br>
+<img src="https://user-images.githubusercontent.com/62788816/159218534-f2752609-cce1-41cf-a7fe-6640b37385af.jpg" alt="wiisync" loading="lazy"><br>
+手柄1号灯长亮表示连接成功，可以开始游戏，如果没亮多试几次，还不行重启电脑<br>
+<img src="https://user-images.githubusercontent.com/62788816/156364890-8d99e2fe-564a-4c2b-ade6-6fd5be841f70.png" alt="1p" loading="lazy"><br>
+完成!</p>
+]]></content>
+    </entry>
+</feed>

@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>Dolphin模拟器使用教程 | WaterLemons2k的博客</title>
+<meta name="description" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://waterlemons2k.github.io/favicon.ico?v=1654603406286">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://waterlemons2k.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://waterlemons2k.github.io">
+        <img class="avatar" src="https://waterlemons2k.github.io/images/avatar.png?v=1654603406286" alt=""
+          width="32px" height="32px">
+      </a>
+      <a href="https://waterlemons2k.github.io">
+        <h1 class="site-title">
+          WaterLemons2k的博客
+        </h1>
+      </a>
+    </div>
+    <div class="right">
+      <div class="gridea-search-div" v-if="headSearchShow">
+        <form id="gridea-search-form" action="https://waterlemons2k.github.io/search/">
+          <input class="gridea-search-input" autocomplete="off" spellcheck="false" name="q" />
+        </form>
+      </div>
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }"
+          @click="menuClick()"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      <div class="gridea-search-div" v-if="menuSearchShow">
+        <form id="gridea-search-form" action="https://waterlemons2k.github.io/search/">
+          <input class="gridea-search-input" autocomplete="off" spellcheck="false" name="q" />
+        </form>
+      </div>
+      
+        
+            <a href="/" class="menu purple-link">
+              首页
+            </a>
+            
+              
+    </div>
+  </div>
+</transition>
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">Dolphin模拟器使用教程</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-03-06</span>
+            
+          </div>
+          <div class="post-content">
+            <p>首先请<a href="https://cn.dolphin-emu.org/">下载</a>Dolphin模拟器，<a href="https://file.waterlemons2k.com/Dolphin/">备用下载</a><br>
+如果报错请下载<a href="https://file.waterlemons2k.com/vc2015-2019.x64.exe">VC2015-2019 x64</a><br>
+解压后打开Dolphin.exe,第一次打开会弹出一个窗口，点否<br>
+<img src="https://user-images.githubusercontent.com/62788816/156364727-040ec7fb-f55c-48f1-88ad-5048e8bbc5f7.png" alt="first" loading="lazy"><br>
+接下来会弹出更新可用窗口，这里选择不要自动更新<br>
+<img src="https://user-images.githubusercontent.com/62788816/156364733-909a6413-8319-48f0-918f-5ce4924ce309.png" alt="update" loading="lazy"><br>
+点击视图-表单列以自定义每列显示的内容<br>
+<img src="https://user-images.githubusercontent.com/62788816/159620091-2872fb29-777d-4e03-98a1-da65868ae09a.png" alt="custom" loading="lazy"></p>
+<h2 id="设置">设置</h2>
+<p>在设置-Wii可以更改感应条位置、红外灵敏度、扬声器音量<br>
+<img src="https://user-images.githubusercontent.com/62788816/156364744-7745dfc9-72ef-4136-a802-7abe00f2ce90.png" alt="wiiset" loading="lazy"><br>
+然后点击路径-添加 将存放有Wii游戏的目录添加进去<br>
+<img src="https://user-images.githubusercontent.com/62788816/159217601-bd40b858-9561-4143-b218-c7da0324423b.png" alt="Add" loading="lazy"></p>
+<h2 id="图形">图形</h2>
+<p>点图形-常规<br>
+<img src="https://user-images.githubusercontent.com/62788816/156364749-bc516174-f7e5-4ac1-a0d3-1238d40948a9.png" alt="graphics" loading="lazy"><br>
+后端:Direct3D 12、Direct3D 11、Vulkan、OpenGL 逐个测试后选择最好的<br>
+长宽比:拉伸到窗口大小 将图像拉伸至窗口大小</p>
+<h3 id="下载mii"><a href="https://file.waterlemons2k.com/Mii.wad">下载Mii</a></h3>
+<h2 id="直通">直通</h2>
+<p>直通推荐使用BCM2045A或CSR8510芯片的蓝牙适配器<a href="https://file.waterlemons2k.com/zadig-2.4.exe">下载Zadig</a><br>
+以管理员身份运行，点Options-List All Devices<br>
+<img src="https://user-images.githubusercontent.com/62788816/158530436-3d18c3d5-30eb-48c1-b8ce-3b9bf53d5dc2.png" alt="Zadig1" loading="lazy"><br>
+选择<strong>libusbK</strong>或<strong>WinUSB</strong>,点Replace Driver<br>
+<img src="https://user-images.githubusercontent.com/62788816/158530442-6d64dcb5-bf13-457a-afd3-821036980251.png" alt="Zadig2" loading="lazy"><br>
+安装完成!<br>
+<img src="https://user-images.githubusercontent.com/62788816/158530443-c24a9f6d-6e5c-4778-8b19-a4f12e2a269b.png" alt="Zadig3" loading="lazy"><br>
+今后如果出现无法配对的情况时，请尝试Reinstall Driver做最后的努力<br>
+<img src="https://user-images.githubusercontent.com/62788816/159691867-f55dec04-98f9-4c36-8464-82b149979b4c.png" alt="Zadig4" loading="lazy"><br>
+如果提示安装失败，到设备管理器查看是否有驱动，有可以继续，没有请重试<br>
+<img src="https://user-images.githubusercontent.com/62788816/158530446-4cdc5783-8ed3-4538-ad10-1446ab4e3714.png" alt="devmgmt" loading="lazy"><br>
+回到Dolphin,点控制器，选直通蓝牙适配器<br>
+<img src="https://user-images.githubusercontent.com/62788816/156364858-d1075866-76e6-468a-975c-a568965dd75c.png" alt="passthrough" loading="lazy"><br>
+打开游戏点控制器-同步，屏幕会出现黄字<br>
+<img src="https://user-images.githubusercontent.com/62788816/158531614-197191d1-0168-4b52-992e-bb14f3cc79e6.png" alt="dolphinsync" loading="lazy"><br>
+在出现黄字的同时，打开手柄电池盖，按sync红色按钮 <a href="https://www.businessinsider.com/how-to-sync-wii-remote">图片来源</a><br>
+<img src="https://user-images.githubusercontent.com/62788816/159218534-f2752609-cce1-41cf-a7fe-6640b37385af.jpg" alt="wiisync" loading="lazy"><br>
+手柄1号灯长亮表示连接成功，可以开始游戏，如果没亮多试几次，还不行重启电脑<br>
+<img src="https://user-images.githubusercontent.com/62788816/156364890-8d99e2fe-564a-4c2b-ade6-6fd5be841f70.png" alt="1p" loading="lazy"><br>
+完成!</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://waterlemons2k.github.io/Bilibili-Region/">
+              <h3 class="post-title">
+                下一篇：解除B站区域限制
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+Theme by <a href="https://github.com/kytrun/gridea-theme-fly">Fly-Search</a> | <a class="rss" href="https://waterlemons2k.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script src="https://waterlemons2k.github.io/media/scripts/index.js"></script>
+
+
+
+
+  </body>
+</html>
