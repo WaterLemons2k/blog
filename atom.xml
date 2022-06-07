@@ -2,13 +2,34 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.waterlemons2k.com</id>
     <title>WaterLemons2k的博客</title>
-    <updated>2022-06-07T13:17:23.678Z</updated>
+    <updated>2022-06-07T13:24:03.591Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.waterlemons2k.com"/>
     <link rel="self" href="https://blog.waterlemons2k.com/atom.xml"/>
     <logo>https://blog.waterlemons2k.com/images/avatar.png</logo>
     <icon>https://blog.waterlemons2k.com/favicon.ico</icon>
     <rights>All rights reserved 2022, WaterLemons2k的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[使用Gridea在GitHub Pages上搭建博客]]></title>
+        <id>https://blog.waterlemons2k.com/Gridea-on-GitHub-Pages/</id>
+        <link href="https://blog.waterlemons2k.com/Gridea-on-GitHub-Pages/">
+        </link>
+        <updated>2022-06-07T12:20:23.000Z</updated>
+        <content type="html"><![CDATA[<p>引用:https://gridea.dev/gridea-start/</p>
+<ol>
+<li>首先点击<a href="https://gridea.dev/#started">这里</a>下载Gridea,然后点击<a href="https://github.com/settings/tokens/new">这里</a>创建Token.</li>
+<li>在Note栏填入名称，将Expiration(过期时间)设为No expiration(无限制),最后点Generate token,记下Token.如下图所示:<br>
+<img src="https://user-images.githubusercontent.com/62788816/172381653-0813be53-5e81-4fb6-b3db-a1d09646f519.png" alt="Token" loading="lazy"></li>
+<li>创建一个仓库。在Repository Name栏填入user.github.io(将user替换为GitHub用户名),将状态设为Public(公开).<br>
+<img src="https://user-images.githubusercontent.com/62788816/172386522-8fdc6311-fd57-4aa6-a3fc-140a371c3091.png" alt="repo" loading="lazy"></li>
+<li>打开Gridea,平台设置为Github Pages,在域名栏填入user.github.io(或在域名和CNAME栏填入自定义域名),如下图所示:，然后点击检测远程连接检查，检查成功后保存。<br>
+<img src="https://user-images.githubusercontent.com/62788816/172388698-b64d9328-d92c-4267-a86c-33ebed35daa9.png" alt="Gridea" loading="lazy"></li>
+<li>点击同步后等几分钟，如果访问失败请回到存放Gridea的仓库，点Settings(设置)-Pages,将Source(来源)设置为main,点击Save(保存).</li>
+<li><img src="https://user-images.githubusercontent.com/62788816/172390675-48204bdb-fb8e-4f89-8df8-32e928bc4fda.png" alt="Pages" loading="lazy"><br>
+完成!</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[安卓使用终端启用adb]]></title>
         <id>https://blog.waterlemons2k.com/Android-Terminal-adb/</id>
@@ -213,54 +234,6 @@ s2fp19.exe -o -sasadd 500
 <p>将Dell Perc H310刷写为LSI-9211-8i<br>
 <code>sas2flsh.exe -o -f 2118it.bin</code></p>
 <p>它会询问是否要继续，输入y继续<br>
-完成!</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Dolphin模拟器使用教程]]></title>
-        <id>https://blog.waterlemons2k.com/Dolphin-emu/</id>
-        <link href="https://blog.waterlemons2k.com/Dolphin-emu/">
-        </link>
-        <updated>2022-03-06T02:33:14.000Z</updated>
-        <content type="html"><![CDATA[<p>首先请<a href="https://cn.dolphin-emu.org/">下载</a>Dolphin模拟器，<a href="https://file.waterlemons2k.com/Dolphin/">备用下载</a><br>
-如果报错请下载<a href="https://file.waterlemons2k.com/vc2015-2019.x64.exe">VC2015-2019 x64</a><br>
-解压后打开Dolphin.exe,第一次打开会弹出一个窗口，点否<br>
-<img src="https://user-images.githubusercontent.com/62788816/156364727-040ec7fb-f55c-48f1-88ad-5048e8bbc5f7.png" alt="first" loading="lazy"><br>
-接下来会弹出更新可用窗口，这里选择不要自动更新<br>
-<img src="https://user-images.githubusercontent.com/62788816/156364733-909a6413-8319-48f0-918f-5ce4924ce309.png" alt="update" loading="lazy"><br>
-点击视图-表单列以自定义每列显示的内容<br>
-<img src="https://user-images.githubusercontent.com/62788816/159620091-2872fb29-777d-4e03-98a1-da65868ae09a.png" alt="custom" loading="lazy"></p>
-<h2 id="设置">设置</h2>
-<p>在设置-Wii可以更改感应条位置、红外灵敏度、扬声器音量<br>
-<img src="https://user-images.githubusercontent.com/62788816/156364744-7745dfc9-72ef-4136-a802-7abe00f2ce90.png" alt="wiiset" loading="lazy"><br>
-然后点击路径-添加 将存放有Wii游戏的目录添加进去<br>
-<img src="https://user-images.githubusercontent.com/62788816/159217601-bd40b858-9561-4143-b218-c7da0324423b.png" alt="Add" loading="lazy"></p>
-<h2 id="图形">图形</h2>
-<p>点图形-常规<br>
-<img src="https://user-images.githubusercontent.com/62788816/156364749-bc516174-f7e5-4ac1-a0d3-1238d40948a9.png" alt="graphics" loading="lazy"><br>
-后端:Direct3D 12、Direct3D 11、Vulkan、OpenGL 逐个测试后选择最好的<br>
-长宽比:拉伸到窗口大小 将图像拉伸至窗口大小</p>
-<h3 id="下载mii"><a href="https://file.waterlemons2k.com/Mii.wad">下载Mii</a></h3>
-<h2 id="直通">直通</h2>
-<p>直通推荐使用BCM2045A或CSR8510芯片的蓝牙适配器<a href="https://file.waterlemons2k.com/zadig-2.4.exe">下载Zadig</a><br>
-以管理员身份运行，点Options-List All Devices<br>
-<img src="https://user-images.githubusercontent.com/62788816/158530436-3d18c3d5-30eb-48c1-b8ce-3b9bf53d5dc2.png" alt="Zadig1" loading="lazy"><br>
-选择<strong>libusbK</strong>或<strong>WinUSB</strong>,点Replace Driver<br>
-<img src="https://user-images.githubusercontent.com/62788816/158530442-6d64dcb5-bf13-457a-afd3-821036980251.png" alt="Zadig2" loading="lazy"><br>
-安装完成!<br>
-<img src="https://user-images.githubusercontent.com/62788816/158530443-c24a9f6d-6e5c-4778-8b19-a4f12e2a269b.png" alt="Zadig3" loading="lazy"><br>
-今后如果出现无法配对的情况时，请尝试Reinstall Driver做最后的努力<br>
-<img src="https://user-images.githubusercontent.com/62788816/159691867-f55dec04-98f9-4c36-8464-82b149979b4c.png" alt="Zadig4" loading="lazy"><br>
-如果提示安装失败，到设备管理器查看是否有驱动，有可以继续，没有请重试<br>
-<img src="https://user-images.githubusercontent.com/62788816/158530446-4cdc5783-8ed3-4538-ad10-1446ab4e3714.png" alt="devmgmt" loading="lazy"><br>
-回到Dolphin,点控制器，选直通蓝牙适配器<br>
-<img src="https://user-images.githubusercontent.com/62788816/156364858-d1075866-76e6-468a-975c-a568965dd75c.png" alt="passthrough" loading="lazy"><br>
-打开游戏点控制器-同步，屏幕会出现黄字<br>
-<img src="https://user-images.githubusercontent.com/62788816/158531614-197191d1-0168-4b52-992e-bb14f3cc79e6.png" alt="dolphinsync" loading="lazy"><br>
-在出现黄字的同时，打开手柄电池盖，按sync红色按钮 <a href="https://www.businessinsider.com/how-to-sync-wii-remote">图片来源</a><br>
-<img src="https://user-images.githubusercontent.com/62788816/159218534-f2752609-cce1-41cf-a7fe-6640b37385af.jpg" alt="wiisync" loading="lazy"><br>
-手柄1号灯长亮表示连接成功，可以开始游戏，如果没亮多试几次，还不行重启电脑<br>
-<img src="https://user-images.githubusercontent.com/62788816/156364890-8d99e2fe-564a-4c2b-ade6-6fd5be841f70.png" alt="1p" loading="lazy"><br>
 完成!</p>
 ]]></content>
     </entry>

@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>Gridea使用Gitalk评论系统 | WaterLemons2k的博客</title>
+<title>使用Gridea在GitHub Pages上搭建博客 | WaterLemons2k的博客</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -80,38 +80,34 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">Gridea使用Gitalk评论系统</h2>
+          <h2 class="post-title">使用Gridea在GitHub Pages上搭建博客</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2022-03-11</span>
+            <span><i class="icon-calendar-outline"></i> 2022-06-07</span>
             
           </div>
           <div class="post-content">
-            <p>引用:https://xgmm.me/post/gridea-pei-zhi-gitalk-ping-lun-xi-tong/<br>
-这是一个如何在Gridea里使用Gitalk的教程<br>
-<a href="https://gridea.dev/gridea-start/">Gridea配置教程</a></p>
-<h2 id="配置oauth">配置OAuth</h2>
-<p>首先，在<a href="https://github.com/settings/applications/new">这里</a>配置OAuth application<br>
-<img src="https://user-images.githubusercontent.com/62788816/157833249-1764aa74-853d-4be6-b093-a88fe80ba7ab.png" alt="OAuth" loading="lazy"><br>
-点击Register application.记下Client ID，然后点击Generate a new client secret<br>
-<img src="https://user-images.githubusercontent.com/62788816/157833764-3a527a08-f75b-4277-b6a6-63aa77904404.png" alt="Generate" loading="lazy"><br>
-记下Cleient secrets</p>
-<h1 id="配置gridea">配置Gridea</h1>
-<p>打开Gridea,点击远程-评论配置，配置如图<br>
-<img src="https://user-images.githubusercontent.com/62788816/157835842-ef661e53-99af-4991-a335-a3a894496562.png" alt="Gridea" loading="lazy"><br>
-配置完成后点击同步，然后使用Homepage URL里的地址访问。随便打开一篇文章滑到最底部，你会看到:<br>
-<img src="https://user-images.githubusercontent.com/62788816/157839908-159433b1-ae91-4456-8558-ec537398af33.png" alt="bind" loading="lazy"><br>
-点击使用 GitHub 登录，然后点击Authorize来授权<br>
-<img src="https://user-images.githubusercontent.com/62788816/157840257-5513c72a-9e0b-4646-b162-632248da616e.png" alt="Authorize" loading="lazy"><br>
-完成!</p>
+            <p>引用:https://gridea.dev/gridea-start/</p>
+<ol>
+<li>首先点击<a href="https://gridea.dev/#started">这里</a>下载Gridea,然后点击<a href="https://github.com/settings/tokens/new">这里</a>创建Token.</li>
+<li>在Note栏填入名称，将Expiration(过期时间)设为No expiration(无限制),最后点Generate token,记下Token.如下图所示:<br>
+<img src="https://user-images.githubusercontent.com/62788816/172381653-0813be53-5e81-4fb6-b3db-a1d09646f519.png" alt="Token" loading="lazy"></li>
+<li>创建一个仓库。在Repository Name栏填入user.github.io(将user替换为GitHub用户名),将状态设为Public(公开).<br>
+<img src="https://user-images.githubusercontent.com/62788816/172386522-8fdc6311-fd57-4aa6-a3fc-140a371c3091.png" alt="repo" loading="lazy"></li>
+<li>打开Gridea,平台设置为Github Pages,在域名栏填入user.github.io(或在域名和CNAME栏填入自定义域名),如下图所示:，然后点击检测远程连接检查，检查成功后保存。<br>
+<img src="https://user-images.githubusercontent.com/62788816/172388698-b64d9328-d92c-4267-a86c-33ebed35daa9.png" alt="Gridea" loading="lazy"></li>
+<li>点击同步后等几分钟，如果访问失败请回到存放Gridea的仓库，点Settings(设置)-Pages,将Source(来源)设置为main,点击Save(保存).</li>
+<li><img src="https://user-images.githubusercontent.com/62788816/172390675-48204bdb-fb8e-4f89-8df8-32e928bc4fda.png" alt="Pages" loading="lazy"><br>
+完成!</li>
+</ol>
 
           </div>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://blog.waterlemons2k.com/VMware-HID/">
+            <a class="purple-link" href="https://blog.waterlemons2k.com/Android-Terminal-adb/">
               <h3 class="post-title">
-                下一篇：VMware使用USB输入设备
+                下一篇：安卓使用终端启用adb
               </h3>
             </a>
           </div>
