@@ -2,13 +2,34 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.waterlemons2k.com</id>
     <title>WaterLemons2k的博客</title>
-    <updated>2022-06-07T14:07:20.823Z</updated>
+    <updated>2022-06-28T15:11:31.304Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.waterlemons2k.com"/>
     <link rel="self" href="https://blog.waterlemons2k.com/atom.xml"/>
     <logo>https://blog.waterlemons2k.com/images/avatar.png</logo>
     <icon>https://blog.waterlemons2k.com/favicon.ico</icon>
     <rights>All rights reserved 2022, WaterLemons2k的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[Windows10 0x80070035解决方法]]></title>
+        <id>https://blog.waterlemons2k.com/Windows10-0x80070035/</id>
+        <link href="https://blog.waterlemons2k.com/Windows10-0x80070035/">
+        </link>
+        <updated>2022-06-28T15:01:59.000Z</updated>
+        <content type="html"><![CDATA[<p>连接服务器时，可能会出现0x80070035错误<br>
+<img src="https://user-images.githubusercontent.com/62788816/176213461-7d34b021-49de-4181-aa07-12cef277a6d3.png" alt="1" loading="lazy"></p>
+<h2 id="解决方法">解决方法:</h2>
+<ol>
+<li>打开gpedit.msc,选择管理模板-网络-Lanman工作站-启用不安全的来宾登录<br>
+<img src="https://user-images.githubusercontent.com/62788816/176213471-b7476053-432c-4f9c-9ad7-69e0bb361a92.png" alt="2" loading="lazy"></li>
+<li>选择已启用，点确定<br>
+<img src="https://user-images.githubusercontent.com/62788816/176213474-8182f9d9-8c6f-4c6b-a09b-77f7d2c552c2.png" alt="3" loading="lazy"><br>
+再次尝试访问<br>
+<img src="https://user-images.githubusercontent.com/62788816/176213477-171fa3f3-ece6-4487-81e4-58445a99a447.png" alt="4" loading="lazy"><br>
+成功!</li>
+</ol>
+<p>引用:https://www.jianshu.com/p/446764c1cc0e</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用Gridea在GitHub Pages上搭建博客]]></title>
         <id>https://blog.waterlemons2k.com/Gridea-on-GitHub-Pages/</id>
@@ -45,24 +66,6 @@ start adbd
 </code></pre>
 <p>现在可以尝试使用<code>adb connect ip</code>来连接设备!<br>
 来源:https://blog.csdn.net/casual_clover/article/details/121992404</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[你换的“德赛原装电池”是什么来头]]></title>
-        <id>https://blog.waterlemons2k.com/Desay-Battery-source/</id>
-        <link href="https://blog.waterlemons2k.com/Desay-Battery-source/">
-        </link>
-        <updated>2022-04-16T08:40:51.000Z</updated>
-        <content type="html"><![CDATA[<p>来源:http://www.360doc.com/content/19/1215/08/42718021_879822337.shtml</p>
-<p>今天我们来说说今年市场上出货量最大的原装电池。说这种电池前先必须来谈谈比较主流的电芯厂家。<br>
-苹果官方售后用的：ATL新能源、LG乐金化学（这两家电芯因为和苹果有协议，避免误会根本不会在国内公开销售电芯）<br>
-市场上全新全原的电池就是用以上主流或杂牌电芯，配上国产保护板排线或者原拆排线或者原拆板后接排焊接而成。之后再经过电芯前后丝印字体印刷，品牌电池或者会在电芯外面包裹一层自己品牌信息贴纸，最后经过写序列号、电池容量、循环次数等就得到一块全新电池。<br>
-花上五六毛钱封上包装贴上序列号等信息贴纸，一块德赛原厂原装电池就等着出现在各大手机维修店内。<br>
-如果用盒子包装，成本会贵几毛。<br>
-一般商家都会告诉你，都是德赛代工厂(注意德赛真的是代工厂，苹果原装电池的电芯与保护板都是有其他供应商生产，德赛只是相当于一个包装厂)拿出来的货，你就当听个笑话好了。各厂家用不同电芯与保护板以及生产工艺不同，并不好直接评定电池的好坏。<br>
-目前4.7寸电池代工厂有德赛和新浦(华普后被收购改名)，5.5寸电池代工厂有欣旺达和德赛。电池序列号前三位是代工厂代号，德赛F5D、新浦FG9、欣旺达F8Y。第四位是生产年份，第五六位是生产周份。<br>
-因为今年的“原装”电池泛滥，有些品牌厂家和销售商也坐不住了纷纷出辨别教程以及鼓励向有关部门举报造假售假行为。<br>
-之前炒的是原装数据线、原装充电器、原装耳机等，近两年开始炒原装电池。电池也是刚需，手机用两年电池寿命到了必须要换。炒电池比炒耳机充电器来钱更容易吧，而且换电池需要手工，同样的带动了维修店一起赚取丰厚的利润。</p>
 ]]></content>
     </entry>
     <entry>
