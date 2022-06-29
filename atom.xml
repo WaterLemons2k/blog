@@ -2,13 +2,45 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.waterlemons2k.com</id>
     <title>WaterLemons2k的博客</title>
-    <updated>2022-06-28T15:11:31.304Z</updated>
+    <updated>2022-06-29T06:27:18.636Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.waterlemons2k.com"/>
     <link rel="self" href="https://blog.waterlemons2k.com/atom.xml"/>
     <logo>https://blog.waterlemons2k.com/images/avatar.png</logo>
     <icon>https://blog.waterlemons2k.com/favicon.ico</icon>
     <rights>All rights reserved 2022, WaterLemons2k的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[群晖DSM启用SHR]]></title>
+        <id>https://blog.waterlemons2k.com/DSM-Enable-SHR/</id>
+        <link href="https://blog.waterlemons2k.com/DSM-Enable-SHR/">
+        </link>
+        <updated>2022-06-29T05:48:55.000Z</updated>
+        <content type="html"><![CDATA[<p>群晖DSM有一些机型不支持在存储空间管理员中创建SHR(Synology Hybrid RAID)阵列，但可以通过编辑  synoinfo.conf启用:</p>
+<ol>
+<li>开启控制面板-终端机和 SNMP-启动 SSH 功能，点应用<br>
+<img src="https://user-images.githubusercontent.com/62788816/176365661-a4251f36-2d19-4092-a971-8b3d9a7a9d38.png" alt="SSH" loading="lazy"></li>
+<li>输入<code>ssh user@ip</code>连接到群晖的SSH(将user替换为群晖管理员用户名，ip替换为群晖ip)，输入管理员密码</li>
+<li>输入<code>sudo -i</code>切换到root账户，再次输入管理员账户密码</li>
+<li>切换完成后，输入下列命令编辑synoinfo.conf:</li>
+</ol>
+<pre><code>vi /etc.defaults/synoinfo.conf
+</code></pre>
+<ol start="5">
+<li>按一次esc,输入</li>
+</ol>
+<pre><code>/supportraidgroup
+</code></pre>
+<ol start="6">
+<li>找到<code>supportraidgroup=&quot;yes&quot;</code>后按回车，按键盘上的Insert或I键，在此行的开头加#号，然后另起一行添加:</li>
+</ol>
+<pre><code>support_syno_hybrid_raid=”yes”
+</code></pre>
+<ol start="7">
+<li>添加完成后按Esc,输入:wq保存文件。然后重启DSM,完成后可以创建SHR阵列<br>
+引用:https://www.vediotalk.com/archives/4154</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Windows10 0x80070035解决方法]]></title>
         <id>https://blog.waterlemons2k.com/Windows10-0x80070035/</id>
@@ -200,46 +232,6 @@ start adbd
 <pre><code>usb.generic.allowLastHID = &quot;TRUE&quot;
 </code></pre>
 <p>引用:https://blog.csdn.net/future_ai/article/details/80603724</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[将Dell Perc H310阵列卡刷为LSI-9211-8i阵列卡]]></title>
-        <id>https://blog.waterlemons2k.com/H310-to-LSi/</id>
-        <link href="https://blog.waterlemons2k.com/H310-to-LSi/">
-        </link>
-        <updated>2022-03-06T02:54:44.000Z</updated>
-        <content type="html"><![CDATA[<p>来自:https://techmattr.wordpress.com/2016/04/11/updated-sas-hba-crossflashing-or-flashing-to-it-mode-dell-perc-h200-and-h310</p>
-<p>您需要:</p>
-<ol>
-<li>一个FreeDOS可启动U盘，您可以使用<a href="http://rufus.ie/">Rufus</a>创建</li>
-<li><a href="https://www.mediafire.com/download/6mtie10d9ud6675/LSI-9211-8i.zip">LSI-9211-8i.zip</a> 此 ZIP 中的主固件文件是 P20。已经支持最新版本的FreeNAS。ZIP还包含工具，这些工具将使此过程变得更加简单。默认的 sas2flash 工具是 P05，在许多情况下允许降级和刷新不兼容的固件。</li>
-<li>一张Dell Perc H310阵列卡</li>
-</ol>
-<h2 id="开始">开始</h2>
-<ol>
-<li>使用Rufus创建好FreDOS可启动U盘后，将LSI-9211-8i.zip里的内容复制到根目录，看起来像是这样:<br>
-<img src="https://user-images.githubusercontent.com/62788816/156358179-0cddb7ce-16b6-46aa-95e5-84e10891c050.png" alt="folder" loading="lazy"></li>
-<li>重启后引导到FreeDOS可启动U盘</li>
-<li>接下来，我们开始准备刷卡<br>
-<code>megacli.exe -AdpAllInfo -aAll -page 20</code><br>
-按一次或两次回车键，您应该会看到一行以SAS Address开头的序列号:<br>
-<img src="https://user-images.githubusercontent.com/62788816/156358349-17363bd3-2aec-4bdd-9b6e-06526292bdec.jpg" alt="SAS" loading="lazy"><br>
-记下SAS地址<br>
-这是刷写Dell Perc H310的命令<br>
-<code>megarec.exe -writesbr 0 sbrempty.bin</code><br>
-即使失败也继续执行<br>
-<code>megarec.exe -cleanflash 0</code><br>
-重启计算机并重启至U盘</li>
-</ol>
-<pre><code>sas2flsh.exe -o -f 6GBPSAS.fw`  
-s2fp19.exe -o -sasadd 500
-</code></pre>
-<p>将500替换为SAS Address序列号<br>
-再次重启计算机并重启至U盘</p>
-<p>将Dell Perc H310刷写为LSI-9211-8i<br>
-<code>sas2flsh.exe -o -f 2118it.bin</code></p>
-<p>它会询问是否要继续，输入y继续<br>
-完成!</p>
 ]]></content>
     </entry>
 </feed>

@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>ESXi使用RDM直通 | WaterLemons2k的博客</title>
+<title>群晖DSM启用SHR | WaterLemons2k的博客</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -80,40 +80,45 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">ESXi使用RDM直通</h2>
+          <h2 class="post-title">群晖DSM启用SHR</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2022-03-13</span>
+            <span><i class="icon-calendar-outline"></i> 2022-06-29</span>
             
           </div>
           <div class="post-content">
-            <p>引用:https://www.77bx.com/60.html<br>
-这是一个ESXi使用裸设备映射(RDM)的教程</p>
-<h2 id="启用ssh">启用SSH</h2>
-<p>登陆ESXi，然后点击操作-服务-启用安全 Shell (SSH)<br>
-<img src="https://user-images.githubusercontent.com/62788816/158052558-98a73ca5-fef2-41d7-a9fa-e0c5bb23401f.png" alt="EnableSSH" loading="lazy"></p>
-<h2 id="查询硬盘">查询硬盘</h2>
+            <p>群晖DSM有一些机型不支持在存储空间管理员中创建SHR(Synology Hybrid RAID)阵列，但可以通过编辑  synoinfo.conf启用:</p>
 <ol>
-<li>点击存储-设备，找到想要直通的硬盘，记住括号里的内容，这是后文所指的硬盘路径<br>
-<img src="https://user-images.githubusercontent.com/62788816/158052758-91810eee-013c-405d-9b64-c6eaf51db572.png" alt="disk" loading="lazy"></li>
-<li>点击存储-数据存储-datastore1(或其它)，记住位置:里的内容，这是后文所指的数据存储路径<br>
-<img src="https://user-images.githubusercontent.com/62788816/158052937-695a855b-f423-45ef-9f3f-5d948361e9d2.png" alt="volume" loading="lazy"></li>
+<li>开启控制面板-终端机和 SNMP-启动 SSH 功能，点应用<br>
+<img src="https://user-images.githubusercontent.com/62788816/176365661-a4251f36-2d19-4092-a971-8b3d9a7a9d38.png" alt="SSH" loading="lazy"></li>
+<li>输入<code>ssh user@ip</code>连接到群晖的SSH(将user替换为群晖管理员用户名，ip替换为群晖ip)，输入管理员密码</li>
+<li>输入<code>sudo -i</code>切换到root账户，再次输入管理员账户密码</li>
+<li>切换完成后，输入下列命令编辑synoinfo.conf:</li>
 </ol>
-<h2 id="开始直通">开始直通</h2>
-<p>使用ssh root@ESXi ip地址或其它软件来连接到SSH，然后执行<br>
-<code>vmkfstools -r /vmfs/devices/disks/硬盘路径 数据存储路径/名称.vmdk</code><br>
-<img src="https://user-images.githubusercontent.com/62788816/158053354-978820de-4917-40f0-9472-84e636a6f6b1.png" alt="ssh" loading="lazy"></p>
-<p>回到数据存储里检查一下<br>
-<img src="https://user-images.githubusercontent.com/62788816/158053412-149f14db-c2ab-4858-8f7b-46aec502a716.png" alt="file" loading="lazy"><br>
-完成!</p>
+<pre><code>vi /etc.defaults/synoinfo.conf
+</code></pre>
+<ol start="5">
+<li>按一次esc,输入</li>
+</ol>
+<pre><code>/supportraidgroup
+</code></pre>
+<ol start="6">
+<li>找到<code>supportraidgroup=&quot;yes&quot;</code>后按回车，按键盘上的Insert或I键，在此行的开头加#号，然后另起一行添加:</li>
+</ol>
+<pre><code>support_syno_hybrid_raid=”yes”
+</code></pre>
+<ol start="7">
+<li>添加完成后按Esc,输入:wq保存文件。然后重启DSM,完成后可以创建SHR阵列<br>
+引用:https://www.vediotalk.com/archives/4154</li>
+</ol>
 
           </div>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://blog.waterlemons2k.com/gridea-gitalk/">
+            <a class="purple-link" href="https://blog.waterlemons2k.com/Windows10-0x80070035/">
               <h3 class="post-title">
-                下一篇：Gridea使用Gitalk评论系统
+                下一篇：Windows10 0x80070035解决方法
               </h3>
             </a>
           </div>
