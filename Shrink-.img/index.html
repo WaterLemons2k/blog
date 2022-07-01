@@ -1,9 +1,11 @@
+
+<!DOCTYPE html>
 <html>
   <head>
     
 <meta charset="utf-8" >
 
-<title>WaterLemons2k的博客</title>
+<title>缩小.img镜像 | WaterLemons2k的博客</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -14,6 +16,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://blog.waterlemons2k.com/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -69,15 +77,61 @@
   </div>
 </transition>
 
-        <div class="content-container">
+      <div class="content-container">
+        <div class="post-detail">
           
-          <div class="tags-container">
+          <h2 class="post-title">缩小.img镜像</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-07-01</span>
             
           </div>
+          <div class="post-content">
+            <p>创建.img镜像时，镜像末尾可能会有大量空闲空间，但可以删除</p>
+<ol>
+<li>使用<code>fdisk -l .img</code>(将.img替换为镜像文件)查看镜像信息，如下面所示:</li>
+</ol>
+<pre><code>fdisk -l .img
+Disk .img: 5 GiB, 5368709120 bytes, 10485760 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 9A3068F9-8DB8-BFCC-01C406213F67
 
+Device       Start     End Sectors  Size  Type
+.img1        2048 4982527 4980480  2.4G  Linux
+.img2      4982528 9176831 4194304  2G  Linux
+</code></pre>
+<ol start="2">
+<li>将End(末尾)的最后一列(示例为9176831)替换到下列命令的End处,将镜像文件替换到.img处:<br>
+<code>truncate --size=$[(End+1)*512] .img</code></li>
+<li>执行后完成!</li>
+</ol>
+<p>引用:https://binac.io/posts/shrink-disk-image/</p>
+
+          </div>
         </div>
 
-        <div class="site-footer">
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://blog.waterlemons2k.com/DSM-Enable-SHR/">
+              <h3 class="post-title">
+                下一篇：群晖DSM启用SHR
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
   <div class="slogan"></div>
   <div class="social-container">
     
@@ -97,12 +151,34 @@ Theme by <a href="https://github.com/kytrun/gridea-theme-fly">Fly-Search</a> | <
 </div>
 
 
-      </div>
-      <script src="https://blog.waterlemons2k.com/media/scripts/index.js"></script>
-
-
-
-
     </div>
+    <script src="https://blog.waterlemons2k.com/media/scripts/index.js"></script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '56a51b007fe67f3b9c71',
+        clientSecret: 'b247ef1aac932a760bf8e506de8263005a4aaf41',
+        repo: 'blog',
+        owner: 'WaterLemons2k',
+        admin: ['WaterLemons2k'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
   </body>
 </html>

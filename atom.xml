@@ -2,13 +2,43 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.waterlemons2k.com</id>
     <title>WaterLemons2k的博客</title>
-    <updated>2022-06-30T11:58:34.768Z</updated>
+    <updated>2022-07-01T01:28:11.416Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.waterlemons2k.com"/>
     <link rel="self" href="https://blog.waterlemons2k.com/atom.xml"/>
     <logo>https://blog.waterlemons2k.com/images/avatar.png</logo>
     <icon>https://blog.waterlemons2k.com/favicon.ico</icon>
     <rights>All rights reserved 2022, WaterLemons2k的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[缩小.img镜像]]></title>
+        <id>https://blog.waterlemons2k.com/Shrink-.img/</id>
+        <link href="https://blog.waterlemons2k.com/Shrink-.img/">
+        </link>
+        <updated>2022-07-01T00:59:49.000Z</updated>
+        <content type="html"><![CDATA[<p>创建.img镜像时，镜像末尾可能会有大量空闲空间，但可以删除</p>
+<ol>
+<li>使用<code>fdisk -l .img</code>(将.img替换为镜像文件)查看镜像信息，如下面所示:</li>
+</ol>
+<pre><code>fdisk -l .img
+Disk .img: 5 GiB, 5368709120 bytes, 10485760 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 9A3068F9-8DB8-BFCC-01C406213F67
+
+Device       Start     End Sectors  Size  Type
+.img1        2048 4982527 4980480  2.4G  Linux
+.img2      4982528 9176831 4194304  2G  Linux
+</code></pre>
+<ol start="2">
+<li>将End(末尾)的最后一列(示例为9176831)替换到下列命令的End处,将镜像文件替换到.img处:<br>
+<code>truncate --size=$[(End+1)*512] .img</code></li>
+<li>执行后完成!</li>
+</ol>
+<p>引用:https://binac.io/posts/shrink-disk-image/</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[群晖DSM启用SHR]]></title>
         <id>https://blog.waterlemons2k.com/DSM-Enable-SHR/</id>
@@ -217,20 +247,6 @@ start adbd
 <img src="https://user-images.githubusercontent.com/62788816/157840257-5513c72a-9e0b-4646-b162-632248da616e.png" alt="Authorize" loading="lazy"><br>
 完成!<br>
 相关博客:<a href="/Gridea-on-GitHub-Pages">使用Gridea在GitHub Pages上搭建博客</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[VMware使用USB输入设备]]></title>
-        <id>https://blog.waterlemons2k.com/VMware-HID/</id>
-        <link href="https://blog.waterlemons2k.com/VMware-HID/">
-        </link>
-        <updated>2022-03-06T02:57:23.000Z</updated>
-        <content type="html"><![CDATA[<p>将USB输入设备(如USB键盘)连接到VMware Workstation时，会出现<br>
-<img src="https://user-images.githubusercontent.com/62788816/156562168-9361790d-7b71-46cb-bd35-16476114c897.png" alt="error" loading="lazy"><br>
-这时，在虚拟机的.vmx配置文件里添加一行即可解决</p>
-<pre><code>usb.generic.allowLastHID = &quot;TRUE&quot;
-</code></pre>
-<p>引用:https://blog.csdn.net/future_ai/article/details/80603724</p>
 ]]></content>
     </entry>
 </feed>
