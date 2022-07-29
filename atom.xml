@@ -2,13 +2,35 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.waterlemons2k.com</id>
     <title>WaterLemons2k的博客</title>
-    <updated>2022-07-01T01:28:11.416Z</updated>
+    <updated>2022-07-29T02:56:02.945Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.waterlemons2k.com"/>
     <link rel="self" href="https://blog.waterlemons2k.com/atom.xml"/>
     <logo>https://blog.waterlemons2k.com/images/avatar.png</logo>
     <icon>https://blog.waterlemons2k.com/favicon.ico</icon>
     <rights>All rights reserved 2022, WaterLemons2k的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[Windows搭建NTP服务器]]></title>
+        <id>https://blog.waterlemons2k.com/Windows-NTP-Server/</id>
+        <link href="https://blog.waterlemons2k.com/Windows-NTP-Server/">
+        </link>
+        <updated>2022-07-29T02:43:46.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>使用win+R打开运行，输入regedit打开注册表编辑器，如下图所示:<br>
+<img src="https://user-images.githubusercontent.com/62788816/181672145-f5a6ca60-0d5a-4ac8-967b-fc2dbf5e50f1.png" alt="run" loading="lazy"></li>
+<li>转到<code>计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer</code>,将Enabled的值设置为1，如下图所示:<br>
+<img src="https://user-images.githubusercontent.com/62788816/181672165-f8268f41-7a49-43b8-a75c-cc0809369be8.png" alt="Enabled" loading="lazy"></li>
+<li>转到<code>计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config</code>,将AnnounceFlags的值设置为5，如下图所示:<br>
+<img src="https://user-images.githubusercontent.com/62788816/181672162-77893a38-8472-488e-a390-43d1420dd71e.png" alt="AnnounceFlags" loading="lazy"></li>
+<li>使用win+R打开运行，输入services.msc打开注册表编辑器，如下图所示:<br>
+<img src="https://user-images.githubusercontent.com/62788816/181672155-415559c6-fcef-4c8f-92b5-0ff09ff90ff8.png" alt="run2" loading="lazy"></li>
+<li>找到Windows Time,将此服务设置为自动，点击确定，如下图所示:<br>
+<img src="https://user-images.githubusercontent.com/62788816/181672158-5614d01f-6280-451f-8082-86ed6a72e247.png" alt="W32Time" loading="lazy"><br>
+点击启动此服务或重启动此服务，完成!</li>
+</ol>
+<p>引用:https://www.fy168.top/2022/01/17/%E7%94%A8windows%E6%90%AD%E5%BB%BAntp%E6%97%B6%E9%97%B4%E6%9C%8D%E5%8A%A1%E5%99%A8/</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[缩小.img镜像]]></title>
         <id>https://blog.waterlemons2k.com/Shrink-.img/</id>
@@ -32,8 +54,11 @@ Device       Start     End Sectors  Size  Type
 .img2      4982528 9176831 4194304  2G  Linux
 </code></pre>
 <ol start="2">
-<li>将End(末尾)的最后一列(示例为9176831)替换到下列命令的End处,将镜像文件替换到.img处:<br>
-<code>truncate --size=$[(End+1)*512] .img</code></li>
+<li>将End(末尾)行的最后一列(示例为9176831)替换到下列命令的End处,将镜像文件替换到.img处:</li>
+</ol>
+<pre><code>truncate --size=$[(End+1)*512] .img
+</code></pre>
+<ol start="3">
 <li>执行后完成!</li>
 </ol>
 <p>引用:https://binac.io/posts/shrink-disk-image/</p>
@@ -198,55 +223,32 @@ start adbd
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[ESXi使用RDM直通]]></title>
+        <title type="html"><![CDATA[ESXi使用RDM直通硬盘]]></title>
         <id>https://blog.waterlemons2k.com/ESXi-RDM/</id>
         <link href="https://blog.waterlemons2k.com/ESXi-RDM/">
         </link>
         <updated>2022-03-13T08:50:31.000Z</updated>
-        <content type="html"><![CDATA[<p>引用:https://www.77bx.com/60.html<br>
-这是一个ESXi使用裸设备映射(RDM)的教程</p>
-<h2 id="启用ssh">启用SSH</h2>
+        <content type="html"><![CDATA[<p>引用:https://www.77bx.com/60.html</p>
+<h2 id="1启用ssh">1.启用SSH</h2>
 <p>登陆ESXi，然后点击操作-服务-启用安全 Shell (SSH)<br>
 <img src="https://user-images.githubusercontent.com/62788816/158052558-98a73ca5-fef2-41d7-a9fa-e0c5bb23401f.png" alt="EnableSSH" loading="lazy"></p>
-<h2 id="查询硬盘">查询硬盘</h2>
+<h2 id="2查询硬盘">2.查询硬盘</h2>
 <ol>
-<li>点击存储-设备，找到想要直通的硬盘，记住括号里的内容，这是后文所指的硬盘路径<br>
+<li>点击存储-设备，找到想要直通的硬盘，记住括号里的内容，这是后文所指的硬盘<br>
 <img src="https://user-images.githubusercontent.com/62788816/158052758-91810eee-013c-405d-9b64-c6eaf51db572.png" alt="disk" loading="lazy"></li>
-<li>点击存储-数据存储-datastore1(或其它)，记住位置:里的内容，这是后文所指的数据存储路径<br>
+<li>点击存储-数据存储-datastore1(或其它)，记住位置:里的内容，这是后文所指的数据存储<br>
 <img src="https://user-images.githubusercontent.com/62788816/158052937-695a855b-f423-45ef-9f3f-5d948361e9d2.png" alt="volume" loading="lazy"></li>
 </ol>
-<h2 id="开始直通">开始直通</h2>
-<p>使用ssh root@ESXi ip地址或其它软件来连接到SSH，然后执行<br>
-<code>vmkfstools -z /vmfs/devices/disks/硬盘路径 数据存储路径/名称.vmdk</code></p>
+<h2 id="3开始直通">3.开始直通</h2>
+<p>使用ssh root@ESXi ip地址或其它软件来连接到ESXi的SSH，然后执行:</p>
+<pre><code>vmkfstools -z /vmfs/devices/disks/硬盘 数据存储/名称.vmdk
+</code></pre>
+<p>以下是示例:</p>
+<pre><code>vmkfstools -z /vmfs/devices/disks/t10.ATA______VMware_Virtual_SATA_Hard_Drive___________00000000000000000001 /vmfs/volumes/6225e1a5-3d33874b-f901-000c29b519e1/1.vmdk
+</code></pre>
 <p>回到数据存储里检查一下<br>
 <img src="https://user-images.githubusercontent.com/62788816/158053412-149f14db-c2ab-4858-8f7b-46aec502a716.png" alt="file" loading="lazy"><br>
 完成!</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Gridea使用Gitalk评论系统]]></title>
-        <id>https://blog.waterlemons2k.com/gridea-gitalk/</id>
-        <link href="https://blog.waterlemons2k.com/gridea-gitalk/">
-        </link>
-        <updated>2022-03-11T09:10:15.000Z</updated>
-        <content type="html"><![CDATA[<p>引用:https://xgmm.me/post/gridea-pei-zhi-gitalk-ping-lun-xi-tong/<br>
-这是一个如何在Gridea里使用Gitalk的教程<br>
-<a href="https://gridea.dev/gridea-start/">Gridea配置教程</a></p>
-<h2 id="配置oauth">配置OAuth</h2>
-<p>首先，在<a href="https://github.com/settings/applications/new">这里</a>配置OAuth application<br>
-<img src="https://user-images.githubusercontent.com/62788816/157833249-1764aa74-853d-4be6-b093-a88fe80ba7ab.png" alt="OAuth" loading="lazy"><br>
-点击Register application.记下Client ID，然后点击Generate a new client secret<br>
-<img src="https://user-images.githubusercontent.com/62788816/157833764-3a527a08-f75b-4277-b6a6-63aa77904404.png" alt="Generate" loading="lazy"><br>
-记下Cleient secrets</p>
-<h1 id="配置gridea">配置Gridea</h1>
-<p>打开Gridea,点击远程-评论配置，配置如图<br>
-<img src="https://user-images.githubusercontent.com/62788816/157835842-ef661e53-99af-4991-a335-a3a894496562.png" alt="Gridea" loading="lazy"><br>
-配置完成后点击同步，然后使用Homepage URL里的地址访问。随便打开一篇文章滑到最底部，你会看到:<br>
-<img src="https://user-images.githubusercontent.com/62788816/157839908-159433b1-ae91-4456-8558-ec537398af33.png" alt="bind" loading="lazy"><br>
-点击使用 GitHub 登录，然后点击Authorize来授权<br>
-<img src="https://user-images.githubusercontent.com/62788816/157840257-5513c72a-9e0b-4646-b162-632248da616e.png" alt="Authorize" loading="lazy"><br>
-完成!<br>
-相关博客:<a href="/Gridea-on-GitHub-Pages">使用Gridea在GitHub Pages上搭建博客</a></p>
 ]]></content>
     </entry>
 </feed>

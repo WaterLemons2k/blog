@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>使用Gridea在GitHub Pages上搭建博客 | WaterLemons2k的博客</title>
+<title>Windows搭建NTP服务器 | WaterLemons2k的博客</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -80,35 +80,35 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">使用Gridea在GitHub Pages上搭建博客</h2>
+          <h2 class="post-title">Windows搭建NTP服务器</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2022-06-07</span>
+            <span><i class="icon-calendar-outline"></i> 2022-07-29</span>
             
           </div>
           <div class="post-content">
-            <p>引用:https://gridea.dev/gridea-start/</p>
-<ol>
-<li>首先点击<a href="https://gridea.dev/#started">这里</a>下载Gridea,然后点击<a href="https://github.com/settings/tokens/new">这里</a>创建Token.</li>
-<li>在Note栏填入名称，将Expiration(过期时间)设为No expiration(无限制),最后点Generate token,记下Token.如下图所示:<br>
-<img src="https://user-images.githubusercontent.com/62788816/172381653-0813be53-5e81-4fb6-b3db-a1d09646f519.png" alt="Token" loading="lazy"></li>
-<li>创建一个仓库。在Repository Name栏填入user.github.io(将user替换为GitHub用户名),将状态设为Public(公开).<br>
-<img src="https://user-images.githubusercontent.com/62788816/172386522-8fdc6311-fd57-4aa6-a3fc-140a371c3091.png" alt="repo" loading="lazy"></li>
-<li>打开Gridea,平台设置为Github Pages,在域名栏填入user.github.io(或在域名和CNAME栏填入自定义域名),如下图所示:，然后点击检测远程连接检查，检查成功后保存。<br>
-<img src="https://user-images.githubusercontent.com/62788816/172388698-b64d9328-d92c-4267-a86c-33ebed35daa9.png" alt="Gridea" loading="lazy"></li>
-<li>点击同步后等几分钟，如果访问失败请回到存放Gridea的仓库，点Settings(设置)-Pages,将Source(来源)设置为main,点击Save(保存).保存后再次尝试同步。</li>
-<li><img src="https://user-images.githubusercontent.com/62788816/172390675-48204bdb-fb8e-4f89-8df8-32e928bc4fda.png" alt="Pages" loading="lazy"><br>
-完成!<br>
-相关博客:<a href="/gridea-gitalk">Gridea使用Gitalk评论系统</a></li>
+            <ol>
+<li>使用win+R打开运行，输入regedit打开注册表编辑器，如下图所示:<br>
+<img src="https://user-images.githubusercontent.com/62788816/181672145-f5a6ca60-0d5a-4ac8-967b-fc2dbf5e50f1.png" alt="run" loading="lazy"></li>
+<li>转到<code>计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer</code>,将Enabled的值设置为1，如下图所示:<br>
+<img src="https://user-images.githubusercontent.com/62788816/181672165-f8268f41-7a49-43b8-a75c-cc0809369be8.png" alt="Enabled" loading="lazy"></li>
+<li>转到<code>计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config</code>,将AnnounceFlags的值设置为5，如下图所示:<br>
+<img src="https://user-images.githubusercontent.com/62788816/181672162-77893a38-8472-488e-a390-43d1420dd71e.png" alt="AnnounceFlags" loading="lazy"></li>
+<li>使用win+R打开运行，输入services.msc打开注册表编辑器，如下图所示:<br>
+<img src="https://user-images.githubusercontent.com/62788816/181672155-415559c6-fcef-4c8f-92b5-0ff09ff90ff8.png" alt="run2" loading="lazy"></li>
+<li>找到Windows Time,将此服务设置为自动，点击确定，如下图所示:<br>
+<img src="https://user-images.githubusercontent.com/62788816/181672158-5614d01f-6280-451f-8082-86ed6a72e247.png" alt="W32Time" loading="lazy"><br>
+点击启动此服务或重启动此服务，完成!</li>
 </ol>
+<p>引用:https://www.fy168.top/2022/01/17/%E7%94%A8windows%E6%90%AD%E5%BB%BAntp%E6%97%B6%E9%97%B4%E6%9C%8D%E5%8A%A1%E5%99%A8/</p>
 
           </div>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://blog.waterlemons2k.com/Android-Terminal-adb/">
+            <a class="purple-link" href="https://blog.waterlemons2k.com/Shrink-.img/">
               <h3 class="post-title">
-                下一篇：安卓使用终端启用adb
+                下一篇：缩小.img镜像
               </h3>
             </a>
           </div>
