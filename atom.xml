@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.waterlemons2k.com</id>
     <title>WaterLemons2k的博客</title>
-    <updated>2022-08-02T13:24:29.501Z</updated>
+    <updated>2022-08-02T13:37:02.714Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.waterlemons2k.com"/>
     <link rel="self" href="https://blog.waterlemons2k.com/atom.xml"/>
@@ -16,7 +16,8 @@
         </link>
         <updated>2022-07-29T02:43:46.000Z</updated>
         <content type="html"><![CDATA[<ol>
-<li>下载Meinberg NTP<a href="https://www.meinbergglobal.com/download/ntp/windows/ntp-4.2.4p8@lennon-o-lpv-win32-setup.exe">下载地址1</a> <a href="https://file.waterlemons2k.com/ntp-4.2.4p8@lennon-o-lpv-win32-setup.exe">下载地址2</a> <a href="https://archive.org/download/meinberg-ntp/ntp-4.2.4p8%40lennon-o-lpv-win32-setup.exe">下载地址3</a> (<strong>此版本仅支持IPv4</strong>)</li>
+<li>下载Meinberg NTP 4.2.8 <a href="https://www.meinbergglobal.com/download/ntp/windows/ntp-4.2.8p15-v2-win32-setup.exe">下载地址1</a> <a href="https://file.waterlemons2k.com/ntp-4.2.8p15-v2-win32-setup.exe">下载地址2</a> <a href="https://archive.org/download/meinberg-ntp/ntp-4.2.8p15-v2-win32-setup.exe">下载地址3</a><br>
+Meinberg NTP 4.2.4 <a href="https://www.meinbergglobal.com/download/ntp/windows/ntp-4.2.4p8@lennon-o-lpv-win32-setup.exe">下载地址1</a> <a href="https://file.waterlemons2k.com/ntp-4.2.4p8@lennon-o-lpv-win32-setup.exe">下载地址2</a> <a href="https://archive.org/download/meinberg-ntp/ntp-4.2.4p8%40lennon-o-lpv-win32-setup.exe">下载地址3</a> (<strong>此版本仅支持IPv4</strong>)</li>
 <li>打开安装程序，点击I Agree以同意许可协议<br>
 <img src="https://user-images.githubusercontent.com/62788816/182384974-575b39f7-cb35-48d1-8f40-49254c84cdb2.png" alt="License" loading="lazy"></li>
 <li>选择安装位置。点击Next<br>
