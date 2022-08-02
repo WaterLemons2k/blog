@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.waterlemons2k.com</id>
     <title>WaterLemons2k的博客</title>
-    <updated>2022-07-29T02:56:02.945Z</updated>
+    <updated>2022-08-02T13:24:29.501Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.waterlemons2k.com"/>
     <link rel="self" href="https://blog.waterlemons2k.com/atom.xml"/>
@@ -16,19 +16,22 @@
         </link>
         <updated>2022-07-29T02:43:46.000Z</updated>
         <content type="html"><![CDATA[<ol>
-<li>使用win+R打开运行，输入regedit打开注册表编辑器，如下图所示:<br>
-<img src="https://user-images.githubusercontent.com/62788816/181672145-f5a6ca60-0d5a-4ac8-967b-fc2dbf5e50f1.png" alt="run" loading="lazy"></li>
-<li>转到<code>计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer</code>,将Enabled的值设置为1，如下图所示:<br>
-<img src="https://user-images.githubusercontent.com/62788816/181672165-f8268f41-7a49-43b8-a75c-cc0809369be8.png" alt="Enabled" loading="lazy"></li>
-<li>转到<code>计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config</code>,将AnnounceFlags的值设置为5，如下图所示:<br>
-<img src="https://user-images.githubusercontent.com/62788816/181672162-77893a38-8472-488e-a390-43d1420dd71e.png" alt="AnnounceFlags" loading="lazy"></li>
-<li>使用win+R打开运行，输入services.msc打开注册表编辑器，如下图所示:<br>
-<img src="https://user-images.githubusercontent.com/62788816/181672155-415559c6-fcef-4c8f-92b5-0ff09ff90ff8.png" alt="run2" loading="lazy"></li>
-<li>找到Windows Time,将此服务设置为自动，点击确定，如下图所示:<br>
-<img src="https://user-images.githubusercontent.com/62788816/181672158-5614d01f-6280-451f-8082-86ed6a72e247.png" alt="W32Time" loading="lazy"><br>
-点击启动此服务或重启动此服务，完成!</li>
+<li>下载Meinberg NTP<a href="https://www.meinbergglobal.com/download/ntp/windows/ntp-4.2.4p8@lennon-o-lpv-win32-setup.exe">下载地址1</a> <a href="https://file.waterlemons2k.com/ntp-4.2.4p8@lennon-o-lpv-win32-setup.exe">下载地址2</a> <a href="https://archive.org/download/meinberg-ntp/ntp-4.2.4p8%40lennon-o-lpv-win32-setup.exe">下载地址3</a> (<strong>此版本仅支持IPv4</strong>)</li>
+<li>打开安装程序，点击I Agree以同意许可协议<br>
+<img src="https://user-images.githubusercontent.com/62788816/182384974-575b39f7-cb35-48d1-8f40-49254c84cdb2.png" alt="License" loading="lazy"></li>
+<li>选择安装位置。点击Next<br>
+<img src="https://user-images.githubusercontent.com/62788816/182384982-42747161-61d3-4b3e-8a22-474d0773f8c9.png" alt="Location" loading="lazy"></li>
+<li>选择要安装的组件，点击Next<br>
+<img src="https://user-images.githubusercontent.com/62788816/182384955-6343df59-37e4-47e8-9499-d98cbea70516.png" alt="Components" loading="lazy"></li>
+<li>将Want to use predefined public NTP servers (see www.pool.ntp.org)? Choose 栏设置为None，将You can specify up to 9 NTP servers (comma separated) you want to use: 栏设置为pool.ntp.org，然后点击Next，如下图所示:<br>
+<img src="https://user-images.githubusercontent.com/62788816/182384967-1e10449a-59ff-446c-921c-34172e3dc05a.png" alt="Conf" loading="lazy"></li>
+<li>弹窗提示Do you want to review the generated config file (to check it or apply additional settings)?，点击否<br>
+<img src="https://user-images.githubusercontent.com/62788816/182384987-c7486f9c-cecc-4138-adc1-886f13cca11c.png" alt="Review" loading="lazy"></li>
+<li>将NTP Service Settings 设置为 Use SYSTEM account (not recommended)，点击Next<br>
+<img src="https://user-images.githubusercontent.com/62788816/182384989-332862a0-2e28-47e8-9f4f-1fb5f129062d.png" alt="Set" loading="lazy"></li>
+<li>点击Finish完成安装<br>
+<img src="https://user-images.githubusercontent.com/62788816/182384972-a936ef0d-303b-4617-a641-8349613bc930.png" alt="Finish" loading="lazy"></li>
 </ol>
-<p>引用:https://www.fy168.top/2022/01/17/%E7%94%A8windows%E6%90%AD%E5%BB%BAntp%E6%97%B6%E9%97%B4%E6%9C%8D%E5%8A%A1%E5%99%A8/</p>
 ]]></content>
     </entry>
     <entry>
